@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Navbar Start */
+#navbar {
+  background: #f9f9f9;
+}
+
+#logo {
+  font-size: 36px;
+  font-weight: 550;
+  color: black;
+  text-shadow: 0px 1px 1px black;
+  margin-bottom: 5px;
+}
+
+#logo span {
+  color: #ffa500;
+}
+
+.navbar-toggler span {
+  color: #ffa500;
+}
+
+.navbar-nav {
+  margin-left: 20px;
+}
+
+.nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 550;
+  color: black;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0-5s ease;
+}
+
+.nav-item .nav-link:hover {
+  background: #ffa500;
+  color: #f9f9f9;
+}
+
+#navbar form button {
+  background: orange;
+  color: white;
+  border: none;
+}
+
+/* Navbar End */
+
+/*Home Section Start*/
+.home {
+  width: 100%;
+  height: 90vh;
+  background-color: #191f24;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .content{
+  text-align: center;
+  padding-top: 200px;
+}
+.home .content h5{
+  color: white;
+  font-size: 38px;
+  font-weight: 550;
+  text-shadow: 0px 1px 1px;
+}
+.home .content h1{
+  color: white;
+  font-size: 70px;
+  font-weight: 550;
+  text-shadow: 0px 1px 1px black;
+  margin-top: 5px;
+}
+.changecontent{
+  color: #e3c813;
+}
+
+.typed-text{
+  color: salmon;
+  font-size: 70px;
+}
+
+.typed-text:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 30px;
+        transform: scale(1.1);
+        animation: bouncing 0.5s .3s infinite; 
+}
+
+
+@keyframes bouncing {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+/* .changecontent::after{
+  content: ' ';
+  color: #ffa500;
+  text-shadow: 0px 1px 1px black;
+  animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+  0%{content: "Portofolio";}
+  10%{content: "PortoKamu";}
+} */
+.home .content p{
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px black;
+  margin-bottom: 30px;
+  margin-top: 5px;
+} 
+@media (max-width:850px){
+  .home{
+      background-position: 50%;
+  }
+}
+@media (max-width:450px){
+  .home .content h5{
+      font-size: 25px;
+  }
+  .home .content h1{
+  font-size: 25px;
+  }
+  .home .content p{
+  font-size: 13px;
+  }
+}
+/*Home Section End*/
+
+/*Section About Start*/
+.main-text h1{
+  text-align: center;
+  text-shadow: 0px 1px 1px black;
+  font-weight: 600;
+}
+.main-text h1 span{
+  color: #ffa500;
+}
+@media (max-width:765px){
+  .about{
+      padding: 0;
+  }
+  .main-text h1{
+      padding: 20px;
+  }
+}
+/*Section About End*/
+
+/*Section Food Recipes Start*/
+.main-txt h1{
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px black;
+}
+.main-txt h1 span{
+  color: #ffa500;
+}
+
+/*Section Food Recipes End*/
+
+/*Section Drink Recipes Start*/
+.main-txt h1 span{
+  color: #ffa500;
+}
+
+/*Section Drink Recipes End*/
+.contact {
+  background-color:  #ffa500;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px 10px 0px;
+  background-color: antiquewhite;
+}
+
+.title {
+  text-align: center;
+  margin-block-end: 50px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+}
+.title:hover{
+  color: grey;
+  font-size: 50px;
+  font-weight: 200;
+  text-wrap: flex;
+}
+
+#submitContact{
+  display: block;
+  justify-content: center;
+}
+
+#submitContact:hover{
+  background-color: lime;
+}
