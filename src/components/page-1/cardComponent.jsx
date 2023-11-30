@@ -1,10 +1,12 @@
+import {useState} from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import { useState } from 'react';
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  makeStyles,
+} from '@mui/material';
 
 const useStyles = makeStyles({
   root: {

@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid';
+import { Grid } from '@mui/material';
 import CardComponent from './cardComponent';
 
 const InspirasiPortofolioHome = () => {
