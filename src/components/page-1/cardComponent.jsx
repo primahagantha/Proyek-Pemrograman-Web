@@ -1,81 +1,50 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-// import {
-//   Card,
-//   CardMedia,
-//   CardContent,
-//   Typography,
-//   makeStyles,
-// } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles';
+import Card from 'react-bootstrap/Card';
 
-
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-    maxWidth: 350,
-    marginTop: '10px',
-    margin: '1rem',
-    cursor: 'pointer',
-    position: 'relative',
-    boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.3s ease-in-out',
-    '&:hover': {
-      boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
-      transform: 'scale3d(1.05, 1.05, 1)',
-    },
-  },
-  image: {
-    height: 200,
-    objectFit: 'cover',
-  },
-  content: {
-    padding: '1rem',
-  },
-  title: {
-    fontSize: '1.2rem',
-    fontWeight: 'bold',
-  },
-  description: {
-    fontSize: '0.9rem',
-    color: '#888',
-  },
-});
 
 const CardComponent = ({ title, description, images }) => {
-  const classes = useStyles();
-  const [hoveredImage, setHoveredImage] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = (imageIndex) => {
-    setHoveredImage(imageIndex);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setHoveredImage(null);
+    setIsHovered(false);
   };
 
   return (
-    <Card className={`${classes.root} card-root`}>
-      {images.map((image, index) => (
-        <CardMedia
-          key={index}
-          className={classes.image}
-          image={image.src}
-          title={image.title}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-        />
-      ))}
+    <Card
+      style={{
+        minWidth: '275px',
+        maxWidth: '350px',
+        marginTop: '10px',
+        margin: '1rem',
+        cursor: 'pointer',
+        position: 'relative',
+        transition: 'transform 0.3s, box-shadow 0.3s',
+        transform: isHovered ? 'translateY(-5px)' : 'none',
+        boxShadow: isHovered ? '0 10px 20px rgba(0,0,0,0.2)' : '0 3px 5px rgba(0,0,0,0.1)',
+      }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="card-root">
+        {images.map((image, index) => (
+          <Card.Img
+            key={index}
+            src={image.src}
+            title={image.title}
+            className="card-image"
+          />
+        ))}
 
-      <CardContent className={classes.content}>
-        <Typography className={classes.title}>{title}</Typography>
-        <Typography className={classes.description}>{description}</Typography>
-      </CardContent>
+        <Card.Body>
+          <Card.Title style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{title}</Card.Title>
+          <Card.Text style={{ fontSize: '0.9rem', color: '#888' }}>{description}</Card.Text>
+        </Card.Body>
+      </div>
     </Card>
   );
 };
@@ -90,5 +59,4 @@ CardComponent.propTypes = {
     })
   ).isRequired,
 };
-
 export default CardComponent;

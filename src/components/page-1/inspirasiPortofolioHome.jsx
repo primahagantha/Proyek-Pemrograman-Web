@@ -1,6 +1,6 @@
-import Grid from '@mui/material/Grid';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import CardComponent from './cardComponent';
-
 const InspirasiPortofolioHome = () => {
   const images1 = [
     { src: 'https://th.bing.com/th/id/OIP.G5K5Gaho70dmBfvNxpH0zwHaEK?rs=1&pid=ImgDetMain', title: 'contoh1' },
@@ -20,17 +20,15 @@ const InspirasiPortofolioHome = () => {
     { title: 'Card 3', description: 'Card 3 description', images: images3 },
   ];
 
-
-  
   return (
-    <Grid container spacing={3}>
+    <Row xs={1} md={2} lg={3} className="g-4">
       {cardData.map((data, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
+        <Col key={index}>
           <CardComponent title={data.title} description={data.description} images={data.images} />
-        </Grid>
+        </Col>
       ))}
-    </Grid>
- );
+    </Row>
+  );
 };
 
 export default InspirasiPortofolioHome;
