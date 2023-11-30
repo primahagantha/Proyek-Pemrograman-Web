@@ -1,21 +1,18 @@
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import About from './components/About'
-import Product from './components/Product'
-import Footer from './components/Footer'
-import Contact from './components/Contact'
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Page1 from './pages/page1';
 
+function App() {
   return (
-    <>
-    <Navbar/>
-    <Home/>
-    <About/>
-    <Product/>
-    <Contact />
-    <Footer/>
-    </>
-  )
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/page1" element={<Page1 />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

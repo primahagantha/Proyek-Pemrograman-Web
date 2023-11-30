@@ -42,15 +42,15 @@ const Product = () => {
 
   return (
     <div className="container mt-2" id="product">
-      <h2 className="text-center mb-5 mt-5">Produk Kami</h2>
+      <h2 className="text-center mb-5 mt-5">Inspirasi Portofolio</h2>
       <Tabs value={false} onChange={handleChange} centered>
-        <Tab label="Produk 1" href="#produk1" />
-        <Tab label="Produk 2" href="#produk2" />
-        <Tab label="Produk 3" href="#produk3" />
+        <Tab label="Portofolio 1" href="#produk1" />
+        <Tab label="Portofolio 2" href="#produk2" />
+        <Tab label="Portofolio 3" href="#produk3" />
       </Tabs>
 
       <div id="produk1">
-        <h2 className="text-center mb-3 mt-5">Produk 1</h2>
+        <h2 className="text-center mb-3 mt-5">Inspirasi Portofolio 1</h2>
         <div className="carousel">
           <div className="carousel-inner">
             {card1Images.map((image, index) => (
@@ -84,7 +84,7 @@ const Product = () => {
       </div>
 
       <div id="produk2">
-        <h2 className="text-center mb-3 mt-5">Produk 2</h2>
+        <h2 className="text-center mb-3 mt-5">Inspirasi Portofolio 2</h2>
         <div className="carousel">
           <div className="carousel-inner">
             {card2Images.map((image, index) => (
@@ -118,7 +118,7 @@ const Product = () => {
       </div>
 
       <div id="produk3">
-        <h2 className="text-center mb-3 mt-5">Produk 3</h2>
+        <h2 className="text-center mb-3 mt-5">Inspirasi Portofolio 3</h2>
         <div className="carousel">
           <div className="carousel-inner">
             {card3Images.map((image, index) => (
